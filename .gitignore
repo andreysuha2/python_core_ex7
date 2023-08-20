@@ -2,3 +2,4 @@
 .git
 .vscode/*
 **/test_folder
+**/clean_folder.egg-info
