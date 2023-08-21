@@ -11,5 +11,5 @@ setup(
     author_email='andreysuha2@gmail.com',
     license='MIT',
     packages=find_namespace_packages(),
-    entry_points={'console_scripts': [ 'clean-folder = clean_folder.main:start_clearing' ]}
+    entry_points={'console_scripts': [ 'clean-folder = clean_folder.main:main' ]}
 )

@@ -1,7 +1,7 @@
-from .normalize import normalize as normalize_name
+from .utils.normalize import normalize as normalize_name
 from sys import argv
 from pathlib import Path
-from .config import OTHER_FOLDER as OTHER_FOLDER, FOLDERS_DATA as FOLDERS_DATA
+from .config.config import OTHER_FOLDER as OTHER_FOLDER, FOLDERS_DATA as FOLDERS_DATA
 import os
 
 if len(argv) < 2:
@@ -53,8 +53,7 @@ def arrange(path):
             elif i.is_file():
                 handle_file(i)
 
-if __name__ == '__main__' or __name__ == 'clean_folder.main':
-    def start_clearing():
+def main():
         if len(argv) < 2:
             print('Param folder is required!')
             exit()
@@ -63,6 +62,6 @@ if __name__ == '__main__' or __name__ == 'clean_folder.main':
         default_path = Path(argv[1])
         create_directories(default_path)
         arrange(default_path)
-else:
-    print('util clear-folder working only as console script')
-    exit()
+
+if __name__ == '__main__':
+    main()
